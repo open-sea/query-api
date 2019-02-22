@@ -5,6 +5,6 @@ import express from 'express';
 
 const app: express.Application = express();
 
-app.use('/',() => console.warn('hello'));
+app.use('/',() => {console.warn('hello'); return 'Hello world';});
 
-app.listen(4000, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));
+app.listen(4000, () => console.log('Express Server Now Running On localhost:4000/'));
